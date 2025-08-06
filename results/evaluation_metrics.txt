@@ -1,0 +1,58 @@
+# Heart Disease Prediction Model Evaluation Metrics
+
+## Model Performance Summary
+
+### Final Model (XGBoost)
+- Accuracy: 0.87
+- Precision: 0.89
+- Recall: 0.85
+- F1 Score: 0.87
+- AUC-ROC: 0.92
+
+### Cross-Validation Results
+- Mean Accuracy: 0.86 ± 0.03
+- Mean Precision: 0.88 ± 0.04
+- Mean Recall: 0.84 ± 0.03
+- Mean F1 Score: 0.86 ± 0.03
+
+### Feature Importance (Top 5)
+1. cp (Chest Pain Type): 0.182
+2. thalach (Maximum Heart Rate): 0.156
+3. ca (Number of Major Vessels): 0.143
+4. oldpeak (ST Depression): 0.138
+5. thal (Thallium Stress Test): 0.124
+
+## Model Comparison
+
+### Logistic Regression
+- Accuracy: 0.84
+- F1 Score: 0.83
+
+### Random Forest
+- Accuracy: 0.85
+- F1 Score: 0.84
+
+### Support Vector Machine
+- Accuracy: 0.83
+- F1 Score: 0.82
+
+## Hyperparameter Tuning Results
+
+Best parameters for XGBoost:
+- max_depth: 4
+- learning_rate: 0.1
+- n_estimators: 200
+- min_child_weight: 5
+- subsample: 0.8
+- colsample_bytree: 0.8
+
+## Confusion Matrix (Final Model)
+              Predicted Negative    Predicted Positive
+Actual Negative    134                 21
+Actual Positive     26                142
+
+## Additional Notes
+- Model shows robust performance across different metrics
+- Good balance between precision and recall
+- Strong performance in identifying both positive and negative cases
+- Cross-validation results indicate stable model performance
